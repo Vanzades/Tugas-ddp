@@ -1,0 +1,66 @@
+class Animal:
+    def __init__(self, name, makanan, hidup, kembangBiak):
+        self.name = name
+        self.makanan = makanan
+        self.hidup = hidup
+        self.kembangBiak = kembangBiak
+
+    def cetak(self):
+        print(
+            "Nama \t \t :", self.name,
+            "\nMakanan \t :", self.makanan,
+            "\nHidup \t \t :", self.hidup,
+            "\nKembang Biak \t :", self.kembangBiak
+        )
+
+class Kambing(Animal):
+    def __init__(self, name, makanan, hidup, kembangBiak, umur, gender):
+        super().__init__(name, makanan, hidup, kembangBiak)
+        self.umur = umur
+        self.gender = gender
+
+    def cetak(self):
+        super().cetak()
+        print(
+            "Umur \t \t :", self.umur,
+            "\nGender \t \t :", self.gender,
+            "\n-------------------------------"
+        )
+
+class Ikan(Animal):
+    def __init__(self, name, makanan, hidup, kembangBiak, jumlah, jenis):
+        super().__init__(name, makanan, hidup, kembangBiak)
+        self.jumlah = jumlah
+        self.jenis = jenis
+
+    def cetak(self):
+        super().cetak()
+        print(
+            "Jumlah \t \t :", self.jumlah,
+            "\nJenis \t \t :", self.jenis,
+            "\n-------------------------------"
+        )
+
+class Ular(Animal):
+    def __init__(self, name, makanan, hidup, kembangBiak, ukuran, warna):
+        super().__init__(name, makanan, hidup, kembangBiak)
+        self.ukuran = ukuran
+        self.warna = warna
+
+    def cetak(self):
+        super().cetak()
+        print(
+            "Ukuran \t \t :", self.ukuran,
+            "\nWarna \t \t :", self.warna,
+            "\n-------------------------------"
+        )
+
+#keterangaan hewan
+kambing = Kambing("Kambing etawa", "Rumput", "Daratan", "Melahirkan", "13 tahun", "Jantan")
+ikan = Ikan("Ikan hiu", "Ikan kecil", "lautan", "Bertelur dan Beranak", "30 Ekor", "Penumbuk")
+ular = Ular("Ular kobra", "Ayam", "Alam Bebas", "Bertelur", "6 Meter", "hitam kecokelatan")
+
+#objek  hewan
+kambing.cetak()
+ikan.cetak()
+ular.cetak()
